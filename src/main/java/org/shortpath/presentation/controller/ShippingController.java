@@ -54,7 +54,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * @author Daniel Perestrelo Vicente
  */
 @Controller
-@RequestMapping("/shipping")
 public class ShippingController {
 
 	/** Logger. */
@@ -79,7 +78,7 @@ public class ShippingController {
 	 * @throws ServiceException
 	 *             if a service access error occurs.
 	 */
-	@RequestMapping(value = "/logisticsNetwork/{name}", method = RequestMethod.POST, headers = "content-type=text/plain")
+	@RequestMapping(value = "/putLogisticsNetwork/{name}", method = RequestMethod.POST, headers = "content-type=text/plain")
 	@ResponseStatus(HttpStatus.OK)
 	public void addLogisticsNetwork(@PathVariable String name,
 			@RequestBody String legs) throws ServiceException {
@@ -103,7 +102,7 @@ public class ShippingController {
 	 * @throws ServiceException
 	 *             if a service access error occurs.
 	 */
-	@RequestMapping(value = "/shippingDetails/{origin}/{destination}", method = RequestMethod.GET)
+	@RequestMapping(value = "/findShippingDetails/{origin}/{destination}", method = RequestMethod.GET)
 	public @ResponseBody
 	ShippingDetails getShippingDetails(@PathVariable String origin,
 			@PathVariable String destination,

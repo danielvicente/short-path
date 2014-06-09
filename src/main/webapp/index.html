@@ -57,7 +57,7 @@
 							"dojox/validate"
 						], function(dom, validate) {
 							dojo.xhrPost({
-								url: "services/shipping/logisticsNetwork/" + dom.byId("networkName").value,
+								url: "services/putLogisticsNetwork/" + dom.byId("networkName").value,
 								postData: dom.byId("logisticsNetwork").value,
 								headers: {"Content-Type": "text/plain;charset=UTF-8"},
 								load: function(response) {
@@ -118,7 +118,7 @@ D E 30
 								fuelPrice: dom.byId("fuelPrice").value
 							});
 
-							var url = "/short-path/services/shipping/shippingDetails"
+							var url = "/short-path/services/findShippingDetails"
 								+ "/" + dom.byId("origin").value
 								+ "/" + dom.byId("destination").value
 								+ "?" + queryString;

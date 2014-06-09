@@ -26,7 +26,7 @@ Para instalar a aplicação, basta realizar o deploy do módulo em um Servidor T
 
 ## APIs REST
 
-#### POST /short-path/services/shipping/logisticsNetwork/{network-name}
+#### POST /short-path/services/putLogisticsNetwork/{network-name}
 
 Cria ou atualiza as informações da malha logística especificada.
 
@@ -57,7 +57,7 @@ Na URI da requisição deve se informar o nome da malha logísica que será cria
 Exemplo
 
 ```
-POST /short-path/services/shipping/logisticsNetwork/Sample HTTP/1.1
+POST /short-path/services/putLogisticsNetwork/Sample HTTP/1.1
 Host: localhost:8080
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:28.0) Gecko/20100101 Firefox/28.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -93,7 +93,7 @@ D E 30
 
 	Caso tenha ocorrido algum erro durante o processamento da requisição.
 
-#### GET /short-path/services/shipping/shippingDetails/{origin}/{destination}?vehicleMileage={vehicleMileage}&fuelPrice={fuelPrice}
+#### GET /short-path/services/findShippingDetails/{origin}/{destination}?vehicleMileage={vehicleMileage}&fuelPrice={fuelPrice}
 
 Calcula a rota com o menor custo entre um ponto de origem e um ponto de destino, levando em consideração a autonomia do veículo e o preço do combustível informado.
 
@@ -108,7 +108,7 @@ A autonomia do veículo e o preço do combustível devem ser incluídos como par
 Exemplo:
 
 ```
-GET /short-path/services/shipping/shippingDetails/A/D?vehicleMileage=10&fuelPrice=2.5 HTTP/1.1
+GET /short-path/services/findShippingDetails/A/D?vehicleMileage=10&fuelPrice=2.5 HTTP/1.1
 Host: localhost:8080
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:28.0) Gecko/20100101 Firefox/28.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
