@@ -14,6 +14,8 @@ Um [Diagrama de Componentes](https://docs.google.com/file/d/0B58PmdFBvQq9T1ctLVp
 
 Um [Diagrama de Classes](https://docs.google.com/file/d/0B58PmdFBvQq9amY0R29HSjdhVFk/) da aplicação.
 
+A documentação das APIs Java do projeto está disponível em [Short Path API](https://docs.google.com/file/d/0B58PmdFBvQq9ajZpR1RwR2F3anM/) para download.
+
 ## Pré-Requisitos
 
 - Java Runtime Edition 7
@@ -162,8 +164,4 @@ Exemplo:
 - 500
 
 	Caso tenha ocorrido algum erro durante o processamento da requisição.
-
-## Documentações
-
-A documentação das APIs Java do projeto está disponível em [Short Path API](https://docs.google.com/file/d/0B58PmdFBvQq9ajZpR1RwR2F3anM/) para download.
 
